@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Android Blog 2019BTECS00073 - Practical 5B</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color:#EEEEEE;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(0, 255, 81);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            padding-left: 100px;
+            padding-right: 100px;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+
+        ul {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 20px;
+        }
+
+        img {
+            height: 70%;
+            width: 70%;
+        }
+
+        hr {
+            border-top: 1px solid black;
+            border-radius: 5px;
+        }
+
+        address {
+            display: block;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <table>
+            <tr>
+                <td><img src="Images/Android_logo_2019_(stacked).svg.png" alt="Android logo" style="height: 131px; width: 128px; padding-left: 200px; padding-right: 20px;"></td>
+                <td style="padding-left: 230px; text-align: center;">
+                    <h1 style="font-size: 50px; text-align: center; font-family: 'Open Sans', sans-serif;">Android Blogs
+                    </h1>
+                    <h3>Author: <span><strong>Sushant Patil.</strong></span> </h3>
+                </td>
+            </tr>
+        </table>
+
+    </header>
+    <hr>
+
+
+    <section="newPost">
+        <table>
+            <tr>
+                <h2 style="text-align: center;">Understanding ExifInterface in Android</h2>
+            </tr>
+            <tr>
+              <div class="image1">
+                    <td><img src="Images/main.jpg" alt="Post1"></td>
+              </div>
+                </td>
+                <td>
+                    <p>We use Images in our apps extensively. For some of the Image Related Applications, all the details of the images are required. But we cannot read the details of the images always directly from the image. There might be needs to know the image details like GPS location, date/time, settings at the time of capture, orientation, etc.</p>
+                    <p>Previously we were struggling to get image info, for which we had to separately extract metadata from different methods and read it to understand the Image properties. Even though when we read, the changes to the images like removing GPS tags or changing the orientation would be challenging tasks.</p>
+
+                    <p>The solution for these is Exif files and ExifInterface.</p>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+       <h2 style="text-align: center;">What is Exif?</h2>
+        <table>
+          <tr>
+              <td><img src="Images/exif-data.jpg" alt="Post1"></td>
+
+              <td><p>Exif stands for Exchangeable Image File Format. This is a standard that defines specific information related to an image or other media captured by a camera. It is capable of storing such important data as camera exposure, date/time the image was captured, and even GPS location. The Sample Exif file looks like,If you look at the above image, We have attributes like Image length and width, date and time of the image taken, From which device this image was taken, Orientation code, and some of the images attribute like light, white balance, focal length, if the flash was on or not, GPS information of the image i.e lat long of the image where it was taken. By looking at this we can get the complete details of the image. Now you may get a fair idea of EXIF files.
+
+</p></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <table>
+            <tr>
+                <h2 style="text-align: center;">ExifInterface in Android</h2>
+            </tr>
+            <tr>
+                <td><img src="Images/bug.jpg" alt="Post3"></td>
+                </td>
+                <td>
+                  <p>We understood what is Exif and what it contains. Let’s see how can we extract Exif data from images in Android. ExifInterface has been introduced in the android support library since 25.1.0. Even though this has been existing since 7.1, It made sense from android 9+ with all the capabilities provided to the interface. This has been added with 100+ attributes to read the Exif tags of the images including information about the camera itself, the camera settings, orientation, and GPS coordinates. For now, it can only read the Exif of JPEG files or a RAW image file. The supported formats are JPEG, DNG, CR2, NEF, NRW, ARW, RW2, ORF, PEF, SRW, RAF, and HEIF.
+                  If you want to use ExifInterface you need to add the below dependency to your build.gradle.</p>
+                </td>
+            </tr>
+        </table>
+        </section>
+
+        <hr>
+
+        <h2 style="padding-left: 100px;"><a href="https://medium.com/@jordanjoz/12-android-blogs-you-should-be-following-1220c7e5398d">Read More Blogs...</a></h2>
+            <footer style="background-color:#EEEEEE;">
+                <p>©2021 All rights reserved.
+                    <br>
+                    <em>Designed and Hosted by</em> <a href="https://linkedin.com/in/abhi-kamble" target="_blank">Mr.
+                        Sushant
+                        patil</a>
+                </p>
+                <address style="color:black;">
+                    Reach Us at: Walchand College of Engineering, Sangli 416 415
+                    <br>
+                    <a href="tel:+91-9075674610">Cell: +91 9075674610</a>
+                    <a href="mailto:abhishekkkamble@outlook.com">Email: patilsushant518@gmail.com</a>
+                </address>
+            </footer>
+</body>
+
+</html>
